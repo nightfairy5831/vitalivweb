@@ -239,7 +239,7 @@ export type Product = {
   name: string;
   price: string;
   desc: string;
-  image?: string;
+  images?: string[];
 };
 
 export type ProductCategory = {
@@ -257,43 +257,73 @@ export const productCategories: ProductCategory[] = [
         name: "AeroChamber Plus Flow-Vu — Infant (0–18 months)",
         price: "$65",
         desc: "Anti-static valved holding chamber that improves medication delivery from a metered-dose inhaler.",
-        image: "/assets/products/product1_28.png",
+        images: [
+          "/assets/products/product1_28.png",
+          "/assets/products/product1_29.png",
+          "/assets/products/product1_30.png",
+          "/assets/products/product1_37.png",
+        ],
       },
       {
         name: "AeroChamber Plus Flow-Vu — Kids (1–5 years)",
         price: "$65",
         desc: "Anti-static valved holding chamber sized for young children.",
-        image: "/assets/products/product1_29.png",
+        images: [
+          "/assets/products/product3_36.png",
+          "/assets/products/product3_38.png",
+          "/assets/products/product3_39.png",
+          "/assets/products/product3_46.png",
+        ],
       },
       {
         name: "AeroChamber Plus Flow-Vu — Adult",
         price: "$73",
         desc: "Adult-sized valved holding chamber for MDI medication delivery.",
-        image: "/assets/products/product2_23.png",
+        images: [
+          "/assets/products/product2_23.png",
+          "/assets/products/product2_24.png",
+          "/assets/products/product2_27.png",
+          "/assets/products/product2_30.png",
+          "/assets/products/product2_37.png",
+        ],
       },
       {
         name: "VISIOMED Funhaler",
         price: "$85",
         desc: "Paediatric spacer with a whistle and spinning disk that makes asthma medication fun for children 18 months+.",
-        image: "/assets/products/product2_27.png",
+        images: [
+          "/assets/products/product4_33.png",
+          "/assets/products/product4_34.png",
+          "/assets/products/product4_35.png",
+        ],
       },
       {
         name: "FEELLIFE Air Pro Portable Mesh Nebulizer",
         price: "$85",
         desc: "Compact one-button nebuliser for home and office — colds, bronchitis, asthma and more.",
-        image: "/assets/products/product5_19.png",
+        images: [
+          "/assets/products/product5_19.png",
+          "/assets/products/product5_20.png",
+          "/assets/products/product5_21.png",
+          "/assets/products/product5_22.png",
+          "/assets/products/product5_4.jpeg",
+        ],
       },
       {
         name: "BMC G2S A20 Auto CPAP",
         price: "$1,600",
         desc: "Self-adjusting CPAP with integrated humidifier, 2.4\" colour screen and 28 dB operation.",
-        image: "/assets/products/product6_16.png",
+        images: [
+          "/assets/products/product6_16.png",
+          "/assets/products/product6_17.png",
+          "/assets/products/product6_18.png",
+        ],
       },
       {
         name: "BMC P2 Nasal Pillow Interface",
         price: "$128",
         desc: "Ultra-lightweight nasal pillow mask with minimal leakage — ideal for sensitive sleepers.",
-        image: "/assets/products/product7_5.jpeg",
+        images: ["/assets/products/product7_5.jpeg"],
       },
     ],
   },

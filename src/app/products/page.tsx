@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import CTABand from "@/components/CTABand";
+import ProductSlider from "@/components/ProductSlider";
 import { productCategories } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -19,10 +20,10 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Categories — only products that have an image are shown */}
+      {/* Categories — only products that have images are shown */}
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         {productCategories
-          .map((cat) => ({ ...cat, items: cat.items.filter((p) => p.image) }))
+          .map((cat) => ({ ...cat, items: cat.items.filter((p) => p.images && p.images.length > 0) }))
           .filter((cat) => cat.items.length > 0)
           .map((cat) => (
           <section key={cat.category} className="mb-16 scroll-mt-24" id={cat.category.toLowerCase().replace(/[^a-z]+/g, "-")}>
@@ -33,10 +34,8 @@ export default function ProductsPage() {
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {cat.items.map((p) => (
                 <article key={p.name} className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-black/5 transition hover:shadow-lg dark:bg-surface dark:ring-white/10 dark:hover:shadow-black/40">
-                  {p.image && (
-                    <div className="relative aspect-square overflow-hidden bg-cream dark:bg-white">
-                      <Image src={p.image} alt={p.name} fill sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw" className="object-contain p-4" />
-                    </div>
+                  {p.images && p.images.length > 0 && (
+                    <ProductSlider images={p.images} alt={p.name} />
                   )}
                   <div className="flex flex-1 flex-col p-6">
                     <h3 className="text-base font-semibold text-brand-deep dark:text-white">{p.name}</h3>

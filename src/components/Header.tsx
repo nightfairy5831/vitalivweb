@@ -33,7 +33,7 @@ export default function Header() {
         scrolled ? "shadow-sm dark:shadow-black/40" : "border-b border-brand-100 dark:border-white/10"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <div className="flex w-full items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-12">
         <Logo />
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -82,7 +82,7 @@ export default function Header() {
       {/* Mobile menu */}
       {open && (
         <div className="border-t border-brand-100 bg-white lg:hidden dark:border-white/10 dark:bg-[#0a1310]">
-          <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6">
+          <nav className="flex w-full flex-col gap-1 px-4 py-4 sm:px-6 lg:px-12">
             {nav.map((item) => (
               <Link
                 key={item.href}
