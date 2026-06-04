@@ -90,7 +90,7 @@ export const services: Service[] = [
     blurb: "Supporting mothers and children from pregnancy through the teenage years.",
     details:
       "Pregnancy confirmation, antenatal care and ultrasounds, maternal check-ups, paediatric assessments and vaccinations, plus adolescent mental-health support including eating disorders and weight management.",
-    image: "/assets/services/download-1-1.png",
+    image: "/assets/services/5.png",
   },
   {
     title: "Specialist ENT Services",
@@ -160,7 +160,7 @@ export const services: Service[] = [
     blurb: "Quality medical care from the comfort of your home.",
     details:
       "An effective tool for non-emergency medical care — colds, sore throats, migraines, rashes, joint pain, prescription refills and mood disorders.",
-    image: "/assets/services/1.png",
+    image: "/assets/evitaliv/download-1-1.png",
   },
 ];
 
